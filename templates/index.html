@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<body>
+ <div class="login">
+ <h1>Prediction of ionic liquid ignition time<h1>
+ 
+	<h2>Input the number of groups presented in cation of the molecule. If not present, input 0</h2>
+
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    <li><input type="text" name="Copper_cation" placeholder="Copper_cation" required="required" />
+    <li><input type="text" name="Nikel_cation" placeholder="Nikel_cation" required="required" />
+    <li><input type="text" name="Zink_cation" placeholder="Zink_cation" required="required" />
+    <li><input type="text" name="Pyridine_cation" placeholder="Pyridine_cation" required="required" />
+    <li><input type="text" name="Imidazole_cation" placeholder="Imidazole_cation" required="required" />
+    <li><input type="text" name="Methyl_cation" placeholder="Methyl_cation" required="required" />
+    <li><input type="text" name="Butyl_cation" placeholder="Butyl_cation" required="required" />
+    <li><input type="text" name="Nitrogen_cation" placeholder="Nitrogen_cation" required="required" />
+    <li><input type="text" name="Amino_cation" placeholder="Amino_cation" required="required" />
+    <li><input type="text" name="Acrilonitrile_cation" placeholder="Acrilonitrile_cation" required="required" />
+    <li><input type="text" name="Methylacetylene_cation" placeholder="Methylacetylene_cation" required="required" />
+    <li><input type="text" name="Pyrrolidine_cation" placeholder="Pyrrolidine_cation" required="required" />
+    <li><input type="text" name="Propene_cation" placeholder="Propene_cation" required="required" />
+    <li><input type="text" name="Ethene_cation" placeholder="Ethene_cation" required="required" />
+    <li><input type="text" name="Azole_cation" placeholder="Azole_cation" required="required" />
+    <li><input type="text" name="Ethyl_cation" placeholder="Ethyl_cation" required="required" />
+    <li><input type="text" name="Chloride_cation" placeholder="Chloride_cation" required="required" />
+
+  
+    <h2>Input the number of groups presented in anion of the molecule. If not present, input 0</h2>
+    <li><input type="text" name="Ethene_anion" placeholder="Ethene_anion" required="required" />
+    <li><input type="text" name="Boron_dihydride_anion" placeholder="Boron_dihydride_anion" required="required" />
+    <li><input type="text" name="Penthyl_anion" placeholder="Penthyl_anion" required="required" />
+    <li><input type="text" name="Octyl_anion" placeholder="Octyl_anion" required="required" />
+    <li><input type="text" name="Propyl_anion" placeholder="Propyl_anion" required="required" />
+    <li><input type="text" name="Phosphorus_anion" placeholder="Phosphorus_anion" required="required" />
+    <li><input type="text" name="Phenyl_anion" placeholder="Phenyl_anion" required="required" />
+    <li><input type="text" name="Nitrogen_anion" placeholder="Nitrogen_anion" required="required" />
+    <li><input type="text" name="Tetrazole_anion" placeholder="Tetrazole_anion" required="required" />
+    <li><input type="text" name="Triazole_anion" placeholder="Triazole_anion" required="required" />
+    <li><input type="text" name="Boron_trihydride_anion" placeholder="Boron_trihydride_anion" required="required" />
+    <li><input type="text" name="Ciano_anion" placeholder="Ciano_anion" required="required" />
+    <li><input type="text" name="Nitrogen_dioxide_anion" placeholder="Nitrogen_dioxide_anion" required="required" />
+    <li><input type="text" name="Boron_dihydride_anion" placeholder="Boron_dihydride_anion" required="required" />
+    <li><input type="text" name="Decahydrodecaborate_anion" placeholder="Decahydrodecaborate_anion" required="required" />
+    <li><input type="text" name="Dodecaborate_anion" placeholder="Dodecaborate_anion" required="required" />
+    <li><input type="text" name="Borohydride_anion" placeholder="Borohydride_anion" required="required" />
+
+<button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+
+    
+    
+    
+    
+    
+    
+    
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
